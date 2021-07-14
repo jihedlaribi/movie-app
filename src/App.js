@@ -4,7 +4,7 @@ import AddMovie from "./components/AddMovie";
 import MovieList from "./components/MovieList";
 import Footer from "./components/Footer";
 import MovieNav from "./components/MovieNav";
-import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route,  Switch } from 'react-router-dom'
 import Details from "./components/Details";
 
 
@@ -18,6 +18,7 @@ function App() {
       title: "Son of the South",
       rating: 2,
       year: "1999",
+      trailer:"https://www.youtube.com/watch?v=x0IjvDWw0i4"
     },
     {
       id: 3,
@@ -26,6 +27,7 @@ function App() {
       title: "The Revenant",
       rating: 4,
       year: "2015",
+      trailer:"https://www.youtube.com/watch?v=LoebZZ8K5N0"
     },
     {
       id: 5,
@@ -34,6 +36,7 @@ function App() {
       title: "Lord of war",
       rating: 3,
       year: "2008",
+      trailer:'https://www.youtube.com/watch?v=Ej83QvHuiNI'
     },
     {
       id: 6,
@@ -42,6 +45,7 @@ function App() {
       title: "Dream house",
       rating: 4,
       year: "2015",
+      trailer:"https://www.youtube.com/watch?v=XFxIYqcmRxc"
     },
     {
       id: 7,
@@ -50,6 +54,7 @@ function App() {
       title: "Planet Earth",
       rating: 4,
       year: "2015",
+      trailer:""
     },
     {
       id: 8,
@@ -114,15 +119,16 @@ console.log(movieList);
           handleHide={handleHide}
         />
       ) : null}
-
- <Router>
+<MovieList  search={search}movies={movieList} handleDelete={handleDelete} rate={rate} />
+{/* <Router>
  <Switch>
  <Route exact path="/"
-            render={(props) => ( <MovieList  search={search}movies={movieList} handleDelete={handleDelete} rate={rate} />)}/>
+            render={(props) => ( )}/> */}
   
  
-   <Route path="movieList/:id" exact render = {(props) => <Details {...props} el={movieList} />}/> </Switch>
- </Router>
+   {/* <Route path="/movielist/:id" exact render = {(props) => <Details {...props} el={movieList} />}/> </Switch> */}
+ {/* </Router> */}
+
 
       <Footer />
     </div>
