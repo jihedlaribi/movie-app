@@ -4,6 +4,8 @@ import AddMovie from "./components/AddMovie";
 import MovieList from "./components/MovieList";
 import Footer from "./components/Footer";
 import MovieNav from "./components/MovieNav";
+import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
+import Details from "./components/Details";
 
 
 function App() {
@@ -112,8 +114,16 @@ console.log(movieList);
           handleHide={handleHide}
         />
       ) : null}
- <MovieList  search={search}movies={movieList} handleDelete={handleDelete} rate={rate} />
+
+ <Router>
+ <Switch>
+ <Route exact path="/"
+            render={(props) => ( <MovieList  search={search}movies={movieList} handleDelete={handleDelete} rate={rate} />)}/>
+  
  
+   <Route path="movieList/:id" exact render = {(props) => <Details {...props} el={movieList} />}/> </Switch>
+ </Router>
+
       <Footer />
     </div>
   );
