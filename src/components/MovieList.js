@@ -9,6 +9,10 @@ import MovieCard from "./MovieCard";
 const MovieList = ({ movies, handleDelete, search, rate }) => {
   return (
     <div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <ItemInterval />
       <div className="movieList">
         {movies

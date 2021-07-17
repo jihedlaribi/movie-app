@@ -6,6 +6,7 @@ const Footer = () => {
     <h1 id='text'>CopyRight  2021 
         created by Jihed Laribi 
     </h1> <div id="icon">
+        <h1><i class="fas fa-address-card"></i></h1>
     <i  class="fab fa-facebook fa-2x" ></i>
     <i class="fab fa-twitter fa-2x"></i>
     <i class="fab fa-instagram-square fa-2x"></i>

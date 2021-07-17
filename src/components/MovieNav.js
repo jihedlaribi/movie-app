@@ -15,8 +15,8 @@ const MovieNav = ({
  
 
   return (
-    <div>
-      <Navbar style={{ backgroundColor: "#000000" }}>
+    <div id='nav'>
+      <Navbar  fixed="top" style={{ backgroundColor: " #e1eec3" }}>
         <Navbar.Brand href="#home">
           <img
             src="https://logopond.com/logos/e9b985c80c0a0c04b698feed80e5c8f7.png"
